@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load staticfiles %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Compalint System</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+ 
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'css/fancybox/jquery.fancybox.css' %}" rel="stylesheet"> 
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts -->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' %}" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+<style>
+    table,th,td
+    {
+        border-collapse: collapse;
+        border: 1px solid rgb(231, 236, 245);
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+        font-weight: bold;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+  <!-- =======================================================
+  * Template Name: Sailor - v4.10.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="/adminhome/">Complaint</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/adminhome/" class="active">Home</a></li>
+
+          <li class="dropdown"><a href="#"><span>Officers</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/officer/">Officer</a></li>
+              <li><a href="/officerview/">View Officers</a></li>
+              <!-- <li><a href="testimonials.html">Testimonials</a></li>
+
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/category/">Category</a></li>
+              <li><a href="/categoryview/">View Category</a></li>
+              <!-- <li><a href="testimonials.html">Testimonials</a></li>
+
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li><a href="/complaintview/">Complaints</a></li>
+          <li><a href="/viewusers/">Users</a></li>
+          <li><a href="/viewfeedback/">Feedback</a></li>
+          <!-- <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+
+          <li><a href="contact.html">Contact</a></li> -->
+          <li><a href="/index/" class="getstarted">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>COMPLAINT CATEGORY</h2>
+          <ol>
+            <li><a href="/adminhome/">Home</a></li>
+            
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-lg-8 mt-5 mt-lg-0">
+ <form >
+<table border="2" align="center">
+    <tr>
+        <th>Category Id</th>
+        <th>Category Name</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        {% for i in cr %}
+        <td>{{i.cid}}</td>
+        <td>{{i.cname}}</td>
+        <td><a href="/cdel?id={{i.cid}}" style="color:red; font-weight:bold;"><i class="fa fa-trash-o" style="color: red; font-size: 24px;"></i></a></td>
+    </tr>
+        {% endfor %}
+</table>   
+</form>
+
+  </div>
+
+</div>
+
+</div>
+</section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+<!-- ======= Footer ======= -->
+<!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+<script type="text/javascript">
+  var letters=/^[a-z A-Z]+$/;
+  var numbers=/^[0-9]+$/;
+  function check()
+  {
+      if(!document.getElementById("t1").value.match(letters))
+      {
+          alert('Input alphabets for name');
+          return false;
+      }
+      else
+      {
+          return true;
+      }
+  }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Ward no</th>
+            <th>House no</th>
+            <th>Phone no</th>
+            <th>Email</th>
+        </tr>
+        {% for i in cr %}
+        <tr>
+            <td>{{i.vname}}</td>
+            <td>{{i.vadr}}</td>
+            <td>{{i.wno}}</td>
+            <td>{{i.hno}}</td>
+            <td>{{i.phno}}</td>
+            <td>{{i.em}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </body>
+    </html>

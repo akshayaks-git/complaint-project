@@ -1,0 +1,72 @@
+<html>
+   <head>
+      <style>
+         #map {
+         height: 100%;
+         }
+         html,
+         body {
+         height: 100%;
+         margin: 0;
+         padding: 0;
+         }
+      </style>
+   </head>
+   <body>
+    <h1></h1>
+    
+      <div id="map"></div>
+   </body>
+   <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlBvpea6s6XcvwKMxhpQSHmNTnpoW7dVU&callback=initMap"></script>
+   <script src="app.js"></script>
+   <script type="text/javascript">
+   navigator.geolocation.getCurrentPosition(
+   function (position) {
+      initMap(position.coords.latitude, position.coords.longitude)
+   },
+   function errorCallback(error) {
+      console.log(error)
+   }
+);
+
+
+function initMap(lat, lng) {
+
+var myLatLng = {
+   lat,
+   lng
+};
+
+var map = new google.maps.Map(document.getElementById('map'), {
+   zoom: 15,
+   center: myLatLng
+});
+var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+   });
+}
+(function () {
+    navigator.geolocation.getCurrentPosition(function (position) {
+            getUserAddressBy(position.coords.latitude, position.coords.longitude)
+        },
+        function (error) {
+            console.log("The Locator was denied :(")
+        })
+
+    function getUserAddressBy(lat, long) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var address = JSON.parse(this.responseText)
+                console.log(address.results[0].formatted_address)
+            }
+        };
+        xhttp.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+long+"&key=***", true);
+        xhttp.send();
+    }
+
+})();
+</script>
+</html>
